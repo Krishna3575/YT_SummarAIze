@@ -23,31 +23,39 @@ This is a FastAPI-based application that summarizes the transcript of a YouTube 
 ```bash
 git clone https://github.com/Krishna3575/YT_SummarAIze.git
 cd YT_SummarAIze
+```
 
-2. Create and Activate a Virtual Environment
-bash
+### 2. Create and Activate a Virtual Environment
+```bash
 python -m venv venv
 # Windows
 venv\Scripts\activate
 # macOS/Linux
 source venv/bin/activate
+```
 
-3. Install Dependencies
-bash
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-4. Setup Environment Variables - Create a .env file in the project root directory and add your Gemini API key as follows:
+### 4. Setup Environment Variables 
+Create a .env file in the project root directory and add your Gemini API key as follows:
 GEMINI_API_KEY=your_gemini_api_key_here (from google ai studios)
 
-5. Run the FastAPI Server Locally using - 
-bash
+### 5. Run the FastAPI Server Locally 
+```bash
 uvicorn app:app --reload
+```
 
-USE -- Send a GET request to the /summarize endpoint with a YouTube video URL as a query parameter as follows:
+## USE 
+Send a GET request to the /summarize endpoint with a YouTube video URL as a query parameter.
+```bash
 http://127.0.0.1:8000/summarize?url=https://www.youtube.com/watch?v=exampleID
+```
 The API respods with a JSON containing the topic name and summary extracted from the video transcript.
 
-⚠️ Notes
+## ⚠️ Notes
 ● This tool works only with YouTube videos that have publicly available subtitles.
 ● The Gemini API key is required and should be kept private.
 ● This project is intended for educational and demonstration purposes.
